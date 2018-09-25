@@ -7,7 +7,10 @@
 /* 
  * File:   main.c
  * Author: gonzalo
- * 
+ * Integrantes del Grupo:
+ *      Acosta Nicolas
+ *      Figueroa Matias
+ *      Sampini Gonzalo
  *
  * Created on 25 de septiembre de 2018, 17:46
  */
