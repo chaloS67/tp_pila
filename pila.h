@@ -27,10 +27,10 @@ typedef struct {
     struct Nodo *siguiente;
 } Nodo;
 
-typedef struct{
+typedef struct {
     int cantidadNodos;
     Nodo *cima;
-}Pila;
+} Pila;
 
 //Precondición: Memoria disponible
 //Entrada:
