@@ -19,3 +19,27 @@ bool esPilaVacia(Pila pilaCabecera) {
         return false;
     }
 }
+
+
+bool apilar (Pila pilaCabecera,Nodo nuevoNodo){
+    if (esPilaVacia (pilaCabecera)== true) {
+        pilaCabecera.cantidadNodos = 1;
+        pilaCabecera.cima = nuevoNodo;
+    }else{
+        nuevoNodo = pilaCabecera.cima;
+        pilaCabecera.cima = nuevoNodo;
+        pilaCabecera.cantidadNodos = pilaCabecera.cantidadNodos+1;
+    }
+    return (true);
+    
+ Nodo desapilar (Pila pilaCabecera){
+       if (esPilaVacia(pilaCabecera)==true){
+           desapilar = NULL;
+       }else{
+           desapilar = pilaCabecera.cima;
+       }
+       
+   }
+    
+    
+}
