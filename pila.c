@@ -32,11 +32,16 @@ bool apilar (Pila pilaCabecera,Nodo nuevoNodo){
     }
     return (true);
     
- Nodo desapilar (Pila pilaCabecera){
+ bool desapilar (Pila pilaCabecera){
+     Nodo auxNodo;
        if (esPilaVacia(pilaCabecera)==true){
-           desapilar = NULL;
+           desapilar=false;
+           
        }else{
-           desapilar = pilaCabecera.cima;
+           auxNodo = pilaCabecera.cima;
+           auxNodo = auxNodo.siguiente;
+           free (pilaCabecera.cima);
+           pilaCabecera.cima = auxNodo;
        }
        
    }
