@@ -48,6 +48,7 @@ int main(int argc, char** argv) {
                     }
                 } else {
                     Nodo *auxNodo;
+                    Nodo auxNodoLeer;
                     char opcionChar = 'N';
                     opcion = validar_menu(  "1 esPilaVacia, cantidadElementosPila.\n"
                                             "2 apilar.\n"
@@ -72,8 +73,8 @@ int main(int argc, char** argv) {
                             pausa();
                             break;
                         case 4:
-                            *auxNodo = leerCima(pilaCabecera);
-                            printf("Nodo cima = %d\n", auxNodo->datoDelNodo.valor);
+                            auxNodoLeer = leerCima(pilaCabecera);
+                            printf("Nodo cima = %d\n", auxNodoLeer.datoDelNodo.valor);
                             pausa();
                             break;
                         case 5:

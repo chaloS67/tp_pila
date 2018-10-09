@@ -50,12 +50,15 @@ Nodo *desapilar(Pila *pilaCabecera) {
 }
 
 Nodo leerCima(Pila *pilaCabecera){
-    Nodo *cimaNodo = NULL;
+    Nodo cimaNodo;
     if (esPilaVacia(*pilaCabecera) == true) {
-        return *cimaNodo;
+        cimaNodo.datoDelNodo.valor = 0;
+        cimaNodo.siguiente = NULL;
+        return cimaNodo;
     } else {
-        cimaNodo = pilaCabecera->cima;
-        return *cimaNodo;
+        cimaNodo.datoDelNodo = pilaCabecera->cima->datoDelNodo;
+        cimaNodo.siguiente = pilaCabecera->cima->siguiente;
+        return cimaNodo;
     }
 }
 
