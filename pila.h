@@ -5,14 +5,14 @@
  */
 
 /* 
- * File:   struct.h
+ * File:   pila.h
  * Author: desktop
  *
- * Created on 26 de septiembre de 2018, 01:36
+ * Created on 30 de septiembre de 2018, 10:17
  */
 
-#ifndef STRUCT_H
-#define STRUCT_H
+#ifndef PILA_H
+#define PILA_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,5 +44,35 @@ Pila *crearPila();
 // Postcondición:Se determina si la pila está vacía o no
 bool esPilaVacia(Pila pilaCabecera);
 
-#endif /* STRUCT_H */
+// Precondición:La pila tiene que ser válida
+// Entrada:Una pila
+// Salida:Un integer
+// Postcondición:la cantidad elementos de la pila
+int cantidadElementosPila(Pila pilaCabecera);
+
+// Precondición:La pila y el nodo tiene que ser válidos
+// Entrada:Una pila
+// Salida:
+// Postcondición:Se guarda el nodo en la pila
+void apilar(Pila *pilaCabecera, Nodo *nuevoNodo);
+
+// Precondición:La pila tiene que ser válida
+// Entrada:Una pila
+// Salida:Un nodo
+// Postcondición:Se devuelve la copia de un nodo y decrementa el contador de la pila
+Nodo *desapilar(Pila *pilaCabecera);
+
+// Precondición:La pila tiene que ser válida 
+// Entrada: Una pila
+// Salida: Una copia de la cima de la pila
+// Postcondición:Hace una copia de tipo Nodo de el nodo de la cima de la pila
+Nodo leerCima(Pila *pilaCabecera);
+
+// Precondición:La pila tiene que ser válida 
+// Entrada: Una pila
+// Salida: 
+// Postcondición:Mientras que la pila no este vacia elimina la cima hasta dejarla vacia
+void eliminarPila(Pila *pilaCabecera);
+
+#endif /* PILA_H */
 
